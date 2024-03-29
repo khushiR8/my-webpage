@@ -5,7 +5,7 @@ ul li {
 
 a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 
 }
 
@@ -14,10 +14,10 @@ ul li a {
 }
 
 body {
-    color: white;
-    background-color: rgb(14 21 84);
+    color: #ffffff;
+    background-color: #0e1554;
     background-image: linear-gradient(to right, rgb(1, 20, 88), rgb(3, 76, 150));
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -31,34 +31,63 @@ h2 {
     font-size: 30px;
     font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
+h4 {
+    font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
 
 .grid-content {
     display: grid;
-    grid-template-columns: 850px;
     gap: 50px;
 }
 
 .grid-items {
+    padding: 10px;
     background-color: #03022f;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
-    border: 5px solid #03022f;
+    align-items: center;
+}
+
+ .main-container h4 {
+    margin:5px 10px;
+} 
+
+.main-container p{
+    margin:5px 10px;
 }
 
 .content-container {
+    display: flex;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 
 }
 
 .font-wrapper {
     font-size: 12px;
-    font-weight: 100;
+    color: #9ca3af;
+    font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 .time-wrapper {
+    margin-top: 0px;
     display: flex;
     justify-content: flex-end;
+}
+
+.hour-wrapper {
+    font-size: 16px;
+    font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+.power-wrapper{
+    margin-bottom: 5px;
+}
+
+.button-wrapper{
+    display: flex;
+    align-items: center;
+    margin: 0 40px;
 }
 
 .footer-container {
@@ -66,6 +95,7 @@ h2 {
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
     display: flex;
     justify-content: space-between;
+    padding-left: 0px;
 }
 
 .content-font {
@@ -77,11 +107,10 @@ h2 {
     height: 5px;
     border: 1px solid #00ff15;
     border-radius: 50px;
-    background-color:#00ff15;
+    background-color: #00ff15;
     box-shadow: 0px 0px 15px 4px #00ff15;
-    margin:37px 20px;
 }
 
-.align-container{
-    margin-left: 300px;
+span{
+    margin-left: 10px;
 }
