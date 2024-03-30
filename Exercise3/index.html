@@ -29,15 +29,27 @@
         send me a message
      </div>
     <form class="form-container center-container">
-        <label for="LName"><b>Last Name</b></label>
-        <input type="text">
-        <label for="FName"><b>First Name</b></label>
-        <input type="text">
-        <label for="msg"><b>Message</b></label>
-        <input type="text">
-        <label for="email"><b>Email</b></label>
-        <input type="text">
-        <input type="button" value="send">
+        <fieldset>
+            <label for="LName">Last Name</label>
+            <input class="form-field" type="text" id="LName" name="LName">
+        </fieldset>
+        <fieldset>
+            <label for="FName">First Name</label>
+            <input class="form-field" type="text">
+        </fieldset>
+        <fieldset>
+            <label for="msg">Message</label>
+            <textarea class="form-field"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="email">Email</label>
+            <input class="form-field" type="text">
+        </fieldset>
+        <div class="button-wrapper">
+            <button type="button" class="form-field">
+                send
+            </button>
+        </div>
     </form>
     
     <footer class="footer-container">
