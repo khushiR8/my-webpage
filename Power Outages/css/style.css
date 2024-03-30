@@ -16,21 +16,26 @@ ul li a {
 body {
     color: #ffffff;
     background-color: #0e1554;
-    background-image: linear-gradient(to right, rgb(1, 20, 88), rgb(3, 76, 150));
+    background-image: linear-gradient(to right, rgb(60, 50, 88), rgb(150, 80, 150));
     max-width: 800px;
     margin: 0 auto;
+    padding: 2em 0;
 }
 
 h1 {
     font-size: 36px;
     font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    margin:0;
 
 }
 
 h2 {
     font-size: 30px;
     font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    text-transform:capitalize;
 }
+
+
 h4 {
     font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
@@ -51,6 +56,7 @@ h4 {
 
  .main-container h4 {
     margin:5px 10px;
+    text-transform :capitalize;
 } 
 
 .main-container p{
@@ -113,4 +119,26 @@ h4 {
 
 span{
     margin-left: 10px;
+}
+#district-list {
+    display:flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding 20px 0;
+}
+
+.btn {
+    padding: 10px;
+    background:white;
+    border: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: lightblue;
+}
+
+.btn:active {
+    background: lightgrey;
 }

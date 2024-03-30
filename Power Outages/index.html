@@ -13,165 +13,15 @@
     <h1>
         Power Outages in Mauritius
     </h1>
-    <h2>
-        Today
+
+    <div id="district-list"></div>
+
+    <h2 id="text">
+        dynamic
     </h2>
-    <div class="grid-content">
-        <div class="grid-items">
-            <div class="main-container">
-                <h4>BAMBOUS</h4>
-                <p class="hour-wrapper">
-                    4 hours ago
-                </p>
-                <p class="font-wrapper">
-                    ZONE INDUSTRIELLE DE BAMBOUS
-                </p>
-            </div>
-            <div class="content-container">
-                <div>
-                    <p class="power-wrapper">
-                        Power has resumed since
-                    </p>
-                    <p class="time-wrapper">
-                        2h 46m 37s
-                    </p>
-                </div>
-                <div class="button-wrapper">
-                    <div class="glow-button"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-items">
-            <div class="main-container">
-                <h4>BAMBOUS</h4>
-                <p class="hour-wrapper">
-                    4 hours ago
-                </p>
-                <p class="font-wrapper">
-                    ZONE INDUSTRIELLE DE BAMBOUS
-                </p>
-            </div>
-            <div class="content-container">
-                <div>
-                    <p class="power-wrapper">
-                        Power has resumed since
-                    </p>
-                    <p class="time-wrapper">
-                        2h 46m 37s
-                    </p>
-                </div>
-                <div class="button-wrapper">
-                    <div class="glow-button"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-items">
-            <div class="main-container">
-                <h4>BAMBOUS</h4>
-                <p class="hour-wrapper">
-                    4 hours ago
-                </p>
-                <p class="font-wrapper">
-                    ZONE INDUSTRIELLE DE BAMBOUS
-                </p>
-            </div>
-            <div class="content-container">
-                <div>
-                    <p class="power-wrapper">
-                        Power has resumed since
-                    </p>
-                    <p class="time-wrapper">
-                        2h 46m 37s
-                    </p>
-                </div>
-                <div class="button-wrapper">
-                    <div class="glow-button"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-items">
-            <div class="main-container">
-                <h4>BAMBOUS</h4>
-                <p class="hour-wrapper">
-                    4 hours ago
-                </p>
-                <p class="font-wrapper">
-                    ZONE INDUSTRIELLE DE BAMBOUS
-                </p>
-            </div>
-            <div class="content-container">
-                <div>
-                    <p class="power-wrapper">
-                        Power has resumed since
-                    </p>
-                    <p class="time-wrapper">
-                        2h 46m 37s
-                    </p>
-                </div>
-                <div class="button-wrapper">
-                    <div class="glow-button"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-items">
-            <div class="main-container">
-                <h4>BAMBOUS</h4>
-                <p class="hour-wrapper">
-                    4 hours ago
-                </p>
-                <p class="font-wrapper">
-                    ZONE INDUSTRIELLE DE BAMBOUS
-                </p>
-            </div>
-            <div class="content-container">
-                <div>
-                    <p class="power-wrapper">
-                        Power has resumed since
-                    </p>
-                    <p class="time-wrapper">
-                        2h 46m 37s
-                    </p>
-                </div>
-                <div class="button-wrapper">
-                    <div class="glow-button"></div>
-                </div>
-            </div>
-        </div>
-
+    <div class="grid-content" id="outage-wrapper">
     </div>
-    <h2>
-        Tomorrow
-    </h2>
-    <div class="grid-content">
-        <div class="grid-items">
-            <div class="main-container">
-                <h4>BAMBOUS</h4>
-                <p class="hour-wrapper">
-                    4 hours ago
-                </p>
-                <p class="font-wrapper">
-                    ZONE INDUSTRIELLE DE BAMBOUS
-                </p>
-            </div>
-            <div class="content-container">
-                <div>
-                    <p class="power-wrapper">
-                        Power has resumed since
-                    </p>
-                    <p class="time-wrapper">
-                        2h 46m 37s
-                    </p>
-                </div>
-                <div class="button-wrapper">
-                    <div class="glow-button"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <footer>
         <ul class="footer-container">
             <li><a href="#">
@@ -209,6 +59,96 @@
                     <span>Source Code</span></a></li>
         </ul>
     </footer>
+
+
+    <script>
+        let url = 'https://raw.githubusercontent.com/MrSunshyne/mauritius-dataset-electricity/main/data/power-outages.json'
+        let district = 'Please select a district'
+
+        let globalResult = {}
+        fetch(url)
+            .then(function(res) {
+                return res.json()
+            })
+            .then(function(result){        
+                listAllDistricts(result)   
+                globalResult = result
+                // updateOutageInfo(result)
+            })
+
+        function updateOutageInfo(selectedDistrict) {
+            let resultArray = globalResult[selectedDistrict]
+            for (let index = 0; index < resultArray.length; index++) {
+                let currentOutage = resultArray[index]
+                addGridItem(currentOutage)
+            }
+        }
+
+        function updateDistrict(name) {
+            updateTitle(name)
+            clearGridItems()
+            updateOutageInfo(name)
+        }
+
+        function updateTitle(title){
+            let x =  document.querySelector('#text')
+            x.innerHTML = title
+        }
+        updateTitle(district)
+
+        function clearGridItems() {
+            let gridContent = document.querySelector('#outage-wrapper') 
+            gridContent.innerHTML = ''
+        }
+        
+        function addGridItem(obj) {
+            let gridContent = document.querySelector('#outage-wrapper') 
+            gridContent.innerHTML += `
+                <div class="grid-items">
+                    <div class="main-container">
+                        <h4>${obj.district}</h4>
+                        <p class="hour-wrapper">
+                            from ${obj.date}
+                        </p>
+                        <p class="font-wrapper">
+                            ${obj.streets}
+                        </p>
+                    </div>
+                    <div class="content-container">
+                        <div>
+                            <p class="power-wrapper">
+                                Power has resumed since
+                            </p>
+                            <p class="time-wrapper">
+                              from ${new Date(obj.from).toLocaleString()} to: ${new Date(obj.to).toLocaleDateString()}
+                            </p>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="glow-button"></div>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
+
+        function listAllDistricts(result) {
+            // get the keys
+            let arrayOfDistricts = Object.keys(result)
+            let districtList = document.querySelector('#district-list');
+
+            for (let index = 0; index < arrayOfDistricts.length; index++) {
+                const element = arrayOfDistricts[index];
+
+                let button = `
+                    <button class="btn" onClick="updateDistrict('${element}')">${element}</button>
+                `
+                
+                districtList.innerHTML += button
+            }
+        }
+        
+
+    </script>
 </body>
 
 </html>
