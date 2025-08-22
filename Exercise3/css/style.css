@@ -8,23 +8,25 @@ ul li {
 }
 
 ul {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: black;
 }
+
 /* Layouts */
-body, html {
+body,
+html {
     height: 100vh;
     font-family: Arial, sans-serif;
 }
 
 .header-container {
     height: 120px;
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -34,17 +36,17 @@ body, html {
 }
 
 .form-container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.form-container input{
-   display: flex;
-   width: 100%;
-   justify-content: center;
-   /* margin-top: 10px; */
-   /* margin-bottom: 20px; */
+.form-container input {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* margin-top: 10px; */
+    /* margin-bottom: 20px; */
 }
 
 .form-container label {
@@ -59,51 +61,52 @@ body, html {
 }
 
 .form-field {
-    padding: 10px 10px;
-   border: 2px solid white;
-   border-radius: 5px;
-   box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
 .form-container fieldset {
-    border:0;
-    padding:0;
-    margin:0;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .form-container .button-wrapper {
-    display:flex;
+    display: flex;
     justify-content: flex-end;
 }
 
 .form-container button {
     border-radius: 10px;
     background-color: white;
-    border:0;
+    border: 0;
     padding: 10px 100px;
-    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.3);
-}
-button:hover {
-    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.6);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
-.footer-container{
+button:hover {
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.6);
+}
+
+.footer-container {
     height: 60px;
 }
 
 .footer-container {
     text-align: center;
 
-    display:grid;
+    display: grid;
     place-items: center;
 
     width: 100%;
-    background:white;
+    background: white;
 }
 
 .header-wrapper {
     /* background: grey; */
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -112,13 +115,13 @@ button:hover {
     font-size: 36px;
 }
 
-.menu-wrapper ul{
+.menu-wrapper ul {
     font-size: 24px;
     display: flex;
     gap: 20px;
 }
 
-.message-wrapper{
+.message-wrapper {
     font-size: 36px;
     margin-bottom: 40px;
 }
