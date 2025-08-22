@@ -2,108 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-    <h1>
-        Power Outages in Mauritius
-    </h1>
+  <h1>Power Outages in Mauritius</h1>
 
-    <div id="district-list"></div>
+  <div id="district-list"></div>
 
-    <h2 id="text">
-        dynamic
-    </h2>
-    <div class="grid-content" id="outage-wrapper">
-    </div>
-    
-    <footer>
-        <ul class="footer-container">
-            <li><a href="#">
-                    <svg data-v-7928333e="" viewBox="0 0 32 32" width="1.2em" height="1.2em">
-                        <path fill="currentColor" d="M30 30H4a2 2 0 0 1-2-2V2h2v26h26Z"></path>
-                        <path fill="currentColor"
-                            d="M10 16h2v10h-2zm-3 6h2v4H7zM26 8h2v18h-2zm-3 6h2v12h-2zm-6 12h-2V12h2zm3 0h-2v-8h2z">
-                        </path>
-                    </svg>
-                    <span>Statistics</span></a></li>
-            <li><a href="#">
-                    <svg data-v-7928333e="" viewBox="0 0 32 32" width="1.2em" height="1.2em">
-                        <path fill="currentColor"
-                            d="M24 3H8a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v6H8V5ZM8 19v-6h16v6Zm0 8v-6h16v6Z">
-                        </path>
-                        <circle cx="11" cy="8" r="1" fill="currentColor"></circle>
-                        <circle cx="11" cy="16" r="1" fill="currentColor"></circle>
-                        <circle cx="11" cy="24" r="1" fill="currentColor"></circle>
-                    </svg>
-                    <span>Data Source</span>
-                </a></li>
-            <li><a href="#">
-                    <svg data-v-7928333e="" viewBox="0 0 32 32" width="1.2em" height="1.2em">
-                        <path fill="currentColor"
-                            d="M28.83 23.17L23 17.33V13a1 1 0 0 0-.29-.71l-10-10a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l10 10A1 1 0 0 0 13 23h4.34l5.83 5.84a4 4 0 0 0 5.66-5.66ZM6 10.41l2.29 2.3l1.42-1.42L7.41 9L9 7.41l4.29 4.3l1.42-1.42L10.41 6L12 4.41L18.59 11L11 18.59L4.41 12Zm21.41 17a2 2 0 0 1-2.82 0l-6.13-6.12a1.8 1.8 0 0 0-.71-.29h-4.34l-1-1L20 12.41l1 1v4.34a1 1 0 0 0 .29.7l6.12 6.14a2 2 0 0 1 0 2.82">
-                        </path>
-                    </svg>
-                    <span>Made by Khushi Beedassy</span></a></li>
-            <li><a href="#">
-                    <svg data-v-7928333e="" viewBox="0 0 32 32" width="1.2em" height="1.2em">
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M16 2a14 14 0 0 0-4.43 27.28c.7.13 1-.3 1-.67v-2.38c-3.89.84-4.71-1.88-4.71-1.88a3.71 3.71 0 0 0-1.62-2.05c-1.27-.86.1-.85.1-.85a2.94 2.94 0 0 1 2.14 1.45a3 3 0 0 0 4.08 1.16a2.93 2.93 0 0 1 .88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4 5.4 0 0 1 1.44-3.76a5 5 0 0 1 .14-3.7s1.17-.38 3.85 1.43a13.3 13.3 0 0 1 7 0c2.67-1.81 3.84-1.43 3.84-1.43a5 5 0 0 1 .14 3.7a5.4 5.4 0 0 1 1.44 3.76c0 5.38-3.27 6.56-6.39 6.91a3.33 3.33 0 0 1 .95 2.59v3.84c0 .46.25.81 1 .67A14 14 0 0 0 16 2">
-                        </path>
-                    </svg>
-                    <span>Source Code</span></a></li>
-        </ul>
-    </footer>
+  <h2 id="text">dynamic</h2>
+  <div class="grid-content" id="outage-wrapper"></div>
 
+  <footer>
+    <ul class="footer-container">
+      <li>
+        <a href="#">
+          <svg data-v-7928333e="" viewBox="0 0 32 32" width="1.2em" height="1.2em">
+            <path fill="currentColor" d="M30 30H4a2 2 0 0 1-2-2V2h2v26h26Z"></path>
+            <path fill="currentColor"
+              d="M10 16h2v10h-2zm-3 6h2v4H7zM26 8h2v18h-2zm-3 6h2v12h-2zm-6 12h-2V12h2zm3 0h-2v-8h2z"></path>
+          </svg>
+          <span>Statistics</span></a>
+      </li>
+      <li>
+        <a href="#">
+          <svg data-v-7928333e="" viewBox="0 0 32 32" width="1.2em" height="1.2em">
+            <path fill="currentColor"
+              d="M24 3H8a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v6H8V5ZM8 19v-6h16v6Zm0 8v-6h16v6Z">
+            </path>
+            <circle cx="11" cy="8" r="1" fill="currentColor"></circle>
+            <circle cx="11" cy="16" r="1" fill="currentColor"></circle>
+            <circle cx="11" cy="24" r="1" fill="currentColor"></circle>
+          </svg>
+          <span>Data Source</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <svg data-v-7928333e="" viewBox="0 0 32 32" width="1.2em" height="1.2em">
+            <path fill="currentColor"
+              d="M28.83 23.17L23 17.33V13a1 1 0 0 0q-.29-.71l-10-10a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l10 10A1 1 0 0 0 13 23h4.34l5.83 5.84a4 4 0 0 0 5.66-5.66ZM6 10.41l2.29 2.3l1.42-1.42L7.41 9L9 7.41l4.29 4.3l1.42-1.42L10.41 6L12 4.41L18.59 11L11 18.59L4.41 12Zm21.41 17a2 2 0 0 1-2.82 0l-6.13-6.12a1.8 1.8 0 0 0-.71-.29h-4.34l-1-1L20 12.41l1 1v4.34a1 1 0 0 0 .29.7l6.12 6.14a2 2 0 0 1 0 2.82">
+            </path>
+          </svg>
+          <span>Made by Khushi Beedassy</span></a>
+      </li>
+      <li>
+        <a href="#">
+          <svg data-v-7928333e="" viewBox="0 0 32 32" width="1.2em" height="1.2em">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M16 2a14 14 0 0 0-4.43 27.28c.7.13 1-.3 1-.67v-2.38c-3.89.84-4.71-1.88-4.71-1.88a3.71 3.71 0 0 0-1.62-2.05c-1.27-.86.1-.85.1-.85a2.94 2.94 0 0 1 2.14 1.45a3 3 0 0 0 4.08 1.16a2.93 2.93 0 0 1 .88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4 5.4 0 0 1 1.44-3.76a5 5 0 0 1 .14-3.7s1.17-.38 3.85 1.43a13.3 13.3 0 0 1 7 0c2.67-1.81 3.84-1.43 3.84-1.43a5 5 0 0 1 .14 3.7a5.4 5.4 0 0 1 1.44 3.76c0 5.38-3.27 6.56-6.39 6.91a3.33 3.33 0 0 1 .95 2.59v3.84c0 .46.25.81 1 .67A14 14 0 0 0 16 2">
+            </path>
+          </svg>
+          <span>Source Code</span></a>
+      </li>
+    </ul>
+  </footer>
 
-    <script>
-        let url = 'https://raw.githubusercontent.com/MrSunshyne/mauritius-dataset-electricity/main/data/power-outages.json'
-        let district = 'Please select a district'
+  <script>
+    let url =
+      "https://raw.githubusercontent.com/MrSunshyne/mauritius-dataset-electricity/main/data/power-outages.json";
+    let district = "Please select a district";
 
-        let globalResult = {}
-        fetch(url)
-            .then(function(res) {
-                return res.json()
-            })
-            .then(function(result){        
-                listAllDistricts(result)   
-                globalResult = result
-                // updateOutageInfo(result)
-            })
+    let globalResult = {};
+    fetch(url)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (result) {
+        listAllDistricts(result);
+        globalResult = result;
+        // updateOutageInfo(result)
+      });
 
-        function updateOutageInfo(selectedDistrict) {
-            let resultArray = globalResult[selectedDistrict]
-            for (let index = 0; index < resultArray.length; index++) {
-                let currentOutage = resultArray[index]
-                addGridItem(currentOutage)
-            }
-        }
+    function updateOutageInfo(selectedDistrict) {
+      let resultArray = globalResult[selectedDistrict];
+      for (let index = 0; index < resultArray.length; index++) {
+        let currentOutage = resultArray[index];
+        addGridItem(currentOutage);
+      }
+    }
 
-        function updateDistrict(name) {
-            updateTitle(name)
-            clearGridItems()
-            updateOutageInfo(name)
-        }
+    function updateDistrict(name) {
+      updateTitle(name);
+      clearGridItems();
+      updateOutageInfo(name);
+    }
 
-        function updateTitle(title){
-            let x =  document.querySelector('#text')
-            x.innerHTML = title
-        }
-        updateTitle(district)
+    function updateTitle(title) {
+      let x = document.querySelector("#text");
+      x.innerHTML = title;
+    }
+    updateTitle(district);
 
-        function clearGridItems() {
-            let gridContent = document.querySelector('#outage-wrapper') 
-            gridContent.innerHTML = ''
-        }
-        
-        function addGridItem(obj) {
-            let gridContent = document.querySelector('#outage-wrapper') 
-            gridContent.innerHTML += `
+    function clearGridItems() {
+      let gridContent = document.querySelector("#outage-wrapper");
+      gridContent.innerHTML = "";
+    }
+
+    function addGridItem(obj) {
+      let gridContent = document.querySelector("#outage-wrapper");
+      gridContent.innerHTML += `
                 <div class="grid-items">
                     <div class="main-container">
                         <h4>${obj.district}</h4>
@@ -120,7 +122,11 @@
                                 Power has resumed since
                             </p>
                             <p class="time-wrapper">
-                              from ${new Date(obj.from).toLocaleString()} to: ${new Date(obj.to).toLocaleDateString()}
+                              from ${new Date(
+        obj.from
+      ).toLocaleString()} to: ${new Date(
+        obj.to
+      ).toLocaleDateString()}
                             </p>
                         </div>
                         <div class="button-wrapper">
@@ -128,27 +134,25 @@
                         </div>
                     </div>
                 </div>
-            `
-        }
+            `;
+    }
 
-        function listAllDistricts(result) {
-            // get the keys
-            let arrayOfDistricts = Object.keys(result)
-            let districtList = document.querySelector('#district-list');
+    function listAllDistricts(result) {
+      // get the keys
+      let arrayOfDistricts = Object.keys(result);
+      let districtList = document.querySelector("#district-list");
 
-            for (let index = 0; index < arrayOfDistricts.length; index++) {
-                const element = arrayOfDistricts[index];
+      for (let index = 0; index < arrayOfDistricts.length; index++) {
+        const element = arrayOfDistricts[index];
 
-                let button = `
+        let button = `
                     <button class="btn" onClick="updateDistrict('${element}')">${element}</button>
-                `
-                
-                districtList.innerHTML += button
-            }
-        }
-        
+                `;
 
-    </script>
+        districtList.innerHTML += button;
+      }
+    }
+  </script>
 </body>
-
+    
 </html>
