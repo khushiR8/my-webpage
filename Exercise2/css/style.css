@@ -18,10 +18,10 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* body {
+body {
     background:url('../images/bg-waves.png');
     background-size:cover;
-}  */
+} 
 
 .header-container {
     height: 120px;
